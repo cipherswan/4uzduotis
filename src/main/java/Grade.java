@@ -21,13 +21,30 @@ public class Grade<K> {
 
     }
 
-    public static void printGrades(List<?> list)
+    public static void printStudents(List<?> list)
     {
         for (Object element: list) {
             System.out.print(" " + element + " ");
         }
         System.out.println();
     }
+
+    public static void printGrades(List<? extends Number> list)
+    {
+        for (Object element: list) {
+            System.out.print(" " + element + " ");
+        }
+        System.out.println();
+    }
+
+    public static void insertProfessors(List<? super Professor> list)
+    {
+        list.add(new Professor("Žygimantas", "Augustas"));
+        list.add(new Professor("Jogaila", "Algirdaitis"));
+
+    }
+
+
 }
 
 
