@@ -1,4 +1,5 @@
 import com.sun.org.apache.xerces.internal.xs.StringList;
+import sun.plugin.perf.PluginRollup;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -20,10 +21,28 @@ public class Main {
         professors[0] = professorGedniminas;
         professors[1] = professorAlgirdas;
         Arrays.sort(professors);
+
+        System.out.println("Comparable.compareTo sort by age ASC: ");
         for (Professor temp: professors) {
             System.out.println(temp.getFirstName() + " " + temp.getLastName() + " " + temp.getAge());
-            
         }
+
+        System.out.println("");
+        System.out.println("Comparator sort by first name: ");
+        Arrays.sort(professors, Professor.ProfessorNameComparator);
+        for (Professor temp: professors) {
+            System.out.println(temp.getFirstName() + " " + temp.getLastName() + " " + temp.getAge());
+        }
+
+        System.out.println("");
+        System.out.println("Comparator sort by last name: ");
+        Arrays.sort(professors, Professor.ProfessorLastNameComparator);
+        for (Professor temp: professors) {
+            System.out.println(temp.getFirstName() + " " + temp.getLastName() + " " + temp.getAge());
+        }
+
+        System.out.println("");
+
 
 
 
