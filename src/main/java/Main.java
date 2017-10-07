@@ -13,6 +13,19 @@ public class Main {
         Person<String, String> p2 = new Person("Antanas", "Jonaitis");
         Person<String, String> studentJuozas = new Person("Juozas", "Juozaitis");
 
+        
+        Professor[] professors = new Professor[2];
+        Professor professorGedniminas = new Professor("Gediminas", "Gediminaitis", 50);
+        Professor professorAlgirdas = new Professor("Žygimantas", "Augustas", 35);
+        professors[0] = professorGedniminas;
+        professors[1] = professorAlgirdas;
+        Arrays.sort(professors);
+        for (Professor temp: professors) {
+            System.out.println(temp.getFirstName() + " " + temp.getLastName() + " " + temp.getAge());
+            
+        }
+
+
 
         Grade<Integer> g1 = new Grade(10);
         Grade<Integer> g2 = new Grade(10);
@@ -20,6 +33,7 @@ public class Main {
 
         boolean same = Person.compare(p1, p2);
         boolean sameGrades = Grade.compareGrades(g1, g2);
+
         System.out.println("Tikrinami " + p1 + p2 + ": " + same);
         System.out.println("Are lygūs pažymiai " + g1 + ", " + g2 + ": " + sameGrades);
 

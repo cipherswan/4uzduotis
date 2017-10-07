@@ -3,6 +3,7 @@ import java.util.List;
 public class Grade<K> {
     private final K key;
 
+
     public Grade(K key) {
         this.key = key;
     }
@@ -39,8 +40,8 @@ public class Grade<K> {
 
     public static void insertProfessors(List<? super Professor> list)
     {
-        list.add(new Professor("Žygimantas", "Augustas"));
-        list.add(new Professor("Jogaila", "Algirdaitis"));
+        list.add(new Professor("Žygimantas", "Augustas", 45));
+        list.add(new Professor("Jogaila", "Algirdaitis", 33));
 
     }
 
