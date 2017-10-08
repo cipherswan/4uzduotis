@@ -39,6 +39,8 @@ public class Professor implements  Comparable<Professor> {
         return this.age - compareAge;
     }
 
+
+
     public static Comparator<Professor> ProfessorNameComparator
             = new Comparator<Professor>() {
 

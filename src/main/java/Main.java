@@ -1,13 +1,11 @@
-import com.sun.org.apache.xerces.internal.xs.StringList;
-import sun.plugin.perf.PluginRollup;
-
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-
         Person<String, String> professorJonas = new Person("Jonas", "Jonaitis");
 
         Person<String, String> p1 = new Person("Petras", "Petraitis");
@@ -76,7 +74,18 @@ public class Main {
         Grade.printGrades(gradeListDouble);
 
 
+        System.out.println(" ");
+        System.out.println("Testing annotations.");
 
+        Class<Student> studentObj = Student.class;
 
+        if (studentObj.isAnnotationPresent(AnnotationClass.class)) {
+
+            Annotation annotation = studentObj.getAnnotation(AnnotationClass.class);
+            AnnotationClass annotationClass = (AnnotationClass) annotation;
+
+            System.out.println("Student name: " + annotationClass.studentFirstName() + " "
+                                                + annotationClass.studentLastName());
+        }
     }
 }
