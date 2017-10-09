@@ -14,9 +14,9 @@ public class Main {
 
         
         Professor[] professors = new Professor[2];
-        Professor professorGedniminas = new Professor("Gediminas", "Gediminaitis", 50);
+        Professor professorGediminas = new Professor("Gediminas", "Gediminaitis", 50);
         Professor professorAlgirdas = new Professor("Žygimantas", "Augustas", 35);
-        professors[0] = professorGedniminas;
+        professors[0] = professorGediminas;
         professors[1] = professorAlgirdas;
         Arrays.sort(professors);
 

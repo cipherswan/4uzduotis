@@ -49,7 +49,6 @@ public class Professor implements  Comparable<Professor> {
             String professorG = p1.getFirstName().toUpperCase();
             String professorA = p2.getFirstName().toUpperCase();
 
-            //ascending order
             return professorG.compareTo(professorA);
         }
 
@@ -63,7 +62,6 @@ public class Professor implements  Comparable<Professor> {
             String professorG = p1.getLastName().toUpperCase();
             String professorA = p2.getLastName().toUpperCase();
 
-            //ascending order
             return professorG.compareTo(professorA);
         }
 

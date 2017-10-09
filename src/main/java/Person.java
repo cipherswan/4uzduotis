@@ -1,6 +1,9 @@
+import lombok.Data;
+
 import java.util.List;
 
-public class Person<K, V> {
+public @Data
+class Person<K, V> {
     private final K key;
     private final V value;
 
